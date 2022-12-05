@@ -75,6 +75,8 @@ func problem() {
 			elfAnyCounter++
 		}
 	}
+
+	// Print Results
 	fmt.Printf("Problem 1: %v\nProblem2: %v\n", elfRangCounter, elfAnyCounter)
 
 }
