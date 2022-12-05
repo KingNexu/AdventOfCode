@@ -48,14 +48,20 @@ func problem() {
 		line := scanner.Text()
 		splitLine := strings.Split(line, ",")
 
+		// Split Each Elfes Start Range and End Range
+		// Then add it to a Slice of Elfes
 		var elfSlice []Elf
 		for _, v := range splitLine {
+
+			// Split Start and End Range
 			posSlice := strings.Split(v, "-")
 			startPosSlice, err := strconv.ParseInt(posSlice[0], 10, 16)
 			endPosSlice, err := strconv.ParseInt(posSlice[1], 10, 16)
 			if err != nil {
 				log.Fatal("❌: ", err)
 			}
+
+			//Add to Slice
 			elfSlice = append(elfSlice, Elf{startPosSlice, endPosSlice})
 		}
 
